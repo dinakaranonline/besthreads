@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 // components
 
 import TableDropdown from "components/Dropdowns/TableDropdown.js";
+import Auth from "layouts/Auth.js";
 
 export default function BestThreadsCardTable({ color }) {
   return (
@@ -14,6 +15,7 @@ export default function BestThreadsCardTable({ color }) {
           (color === "light" ? "bg-white" : "bg-gray-800 text-white")
         }
       >
+        
         <div className="rounded-t mb-0 px-4 py-3 border-0">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full px-4 max-w-full flex-grow flex-1">
@@ -23,17 +25,20 @@ export default function BestThreadsCardTable({ color }) {
                   (color === "light" ? "text-gray-800" : "text-white")
                 }
               >
-                Best Twitter Threads
+                List of Best Twitter Threads 
               </h3>
             </div>
           </div>
         </div>
+
         <div className="block w-full overflow-x-auto">
           
           {/* Projects table */}
           <table className="items-center w-full bg-transparent border-collapse">
             <thead>
               <tr>
+                
+                
                 <th
                   className={
                     "px-6 align-middle border border-solid py-3 text-s uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left " +
@@ -62,7 +67,7 @@ export default function BestThreadsCardTable({ color }) {
                       : "bg-gray-700 text-gray-300 border-gray-600")
                   }
                 >
-                  Author
+                  Retweets
                 </th>
                 <th
                   className={
@@ -72,86 +77,28 @@ export default function BestThreadsCardTable({ color }) {
                       : "bg-gray-700 text-gray-300 border-gray-600")
                   }
                 >
-                  Retweets #
+                  Author
                 </th>
                 <th  
                   className={
-                    "px-6 align-middle border border-solid py-3 text-s uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left " +
+                    "px-1 align-middle border border-solid py-3 text-s uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left " +
                     (color === "light"
                       ? "bg-gray-100 text-gray-600 border-gray-200"
                       : "bg-gray-700 text-gray-300 border-gray-600")
                   }
                 >
-                  Link
+                  Thread
                 </th>
               </tr>
             </thead>
             <tbody>
+              
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-no-wrap p-4 text-left flex items-center">
-                1#
+
                   <span
                     className={
-                      "ml-3 font-bold " +
-                      +(color === "light" ? "text-gray-700" : "text-white")
-                    }
-                  >
-                  10 significant things that the best startup founders get right
-                  </span>
-                </th>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  Startups | Entrepreneurship
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-orange-500 mr-2"></i> pending
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">60%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                        <div
-                          style={{ width: "60%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
-              </tr>
-              <tr>
-                <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-no-wrap p-4 text-left flex items-center">
-                2#
-                  <span
-                    className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -163,56 +110,30 @@ export default function BestThreadsCardTable({ color }) {
                   <br></br>Mentoring
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-green-500 mr-2"></i>{" "}
-                  completed
+                  337
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+            
+                  <a href="https://twitter.com/bahdcoder" target="new" className="font-bold text-gray-800 mt-8">
+                    @bahdcoder
+                  </a>
+                 
+                  
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">100%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-green-200">
-                        <div
-                          style={{ width: "100%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
+                  
+                  <a href="https://twitter.com/bahdcoder/status/1348904248956907520" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+               
                 </td>
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s p-4 text-left flex items-center">
-                3#
+           
                   <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -224,55 +145,27 @@ export default function BestThreadsCardTable({ color }) {
                   <br></br>Portfolio
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-red-500 mr-2"></i> delayed
+                   23
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                     <a href="https://twitter.com/oliverjumpertz" target="new" className="font-bold text-gray-800 mt-8">
+                      @oliverjumpertz
+                    </a>
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">73%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                        <div
-                          style={{ width: "73%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
+                
+                  <a href="https://twitter.com/oliverjumpertz/status/1348988947146354690" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                 
                 </td>
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-no-wrap p-4 text-left flex items-center">
-                4#
+             
                   <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -283,56 +176,31 @@ export default function BestThreadsCardTable({ color }) {
                   Career Development
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                  228
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                  
+
+                  <a href="https://twitter.com/svpino/status/1348589773548638209" target="new" className="font-bold text-gray-800 mt-8">
+                    @svpino
+                  </a>
+                   
+                 
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
+             
+                  <a href="https://twitter.com/svpino/status/1348589773548638209" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                
                 </td>
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s  p-4 text-left flex items-center">
-                5#
+           
                   <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -345,56 +213,28 @@ export default function BestThreadsCardTable({ color }) {
                   Entrepreneurship
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-green-500 mr-2"></i>{" "}
-                  completed
+                
+                  37
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                    <a href="https://twitter.com/RohunJauhar/status/1348662194142113795" target="new" className="font-bold text-gray-800 mt-8">
+                    @RohunJauhar
+                    </a> 
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">100%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-green-200">
-                        <div
-                          style={{ width: "100%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
+                
+                  <a href="https://twitter.com/RohunJauhar/status/1348662194142113795" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                
                 </td>
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-no-wrap p-4 text-left flex items-center">
-                6#
+              
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -408,56 +248,28 @@ export default function BestThreadsCardTable({ color }) {
                   Economy | Digital India
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                  190
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                  <a href="https://twitter.com/hchawlah/" target="new" className="font-bold text-gray-800 mt-8">
+                    @hchawlah
+                  </a>
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                
+                  <a href="https://twitter.com/hchawlah/status/1348263686138257412" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                  
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+              
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s p-4 text-left flex items-center">
-                7#
+              
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -471,56 +283,28 @@ export default function BestThreadsCardTable({ color }) {
                   Amazon | AWS
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                9200
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                  <a href="https://twitter.com/DanRose999/" target="new" className="font-bold text-gray-800 mt-8">
+                    @DanRose999
+                  </a>
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+             
+                  <a href="https://twitter.com/DanRose999/status/1347677573900242944" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+              
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s p-4 text-left flex items-center">
-                8#
+              
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -534,56 +318,28 @@ export default function BestThreadsCardTable({ color }) {
                   Entrepreneurship | Startups
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                  285
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                   <a href="https://twitter.com/MohapatraHemant" target="new" className="font-bold text-gray-800 mt-8">
+                    @MohapatraHemant
+                   </a>
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                  
+                  <a href="https://twitter.com/MohapatraHemant/status/1346858624920875009" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+               
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-no-wrap p-4 text-left flex items-center">
-              9#
+           
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -594,56 +350,28 @@ export default function BestThreadsCardTable({ color }) {
                   Writing Tips
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                  126
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                <a href="https://twitter.com/shreyas" target="new" className="font-bold text-gray-800 mt-8">
+                    @shreyas
+                  </a>
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                
+                  <a href="https://twitter.com/shreyas/status/1349090912891150337" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                  
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+             
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-no-wrap p-4 text-left flex items-center">
-                10#
+              
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -654,56 +382,28 @@ export default function BestThreadsCardTable({ color }) {
                   Leadership | Innovation
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                 1100
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                <a href="https://twitter.com/shreyas" target="new" className="font-bold text-gray-800 mt-8">
+                    @shreyas
+                  </a>
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                 
+                  <a href="https://twitter.com/shreyas/status/1282169204699873281" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+              
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+               
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s p-4 text-left flex items-center">
-                11#
+             
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -716,56 +416,28 @@ export default function BestThreadsCardTable({ color }) {
                   Product Managers
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                  1500
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                  <a href="https://twitter.com/shreyas" target="new" className="font-bold text-gray-800 mt-8">
+                    @shreyas
+                  </a> 
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                 
+                  <a href="https://twitter.com/shreyas/status/1249039638829793280" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s whitespace-no-wrap p-4 text-left flex items-center">
-                12#
+            
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -777,56 +449,28 @@ export default function BestThreadsCardTable({ color }) {
                   Product Manager | Leadership
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                  1300
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                  <a href="https://twitter.com/shreyas" target="new" className="font-bold text-gray-800 mt-8">
+                    @shreyas
+                  </a> 
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+                 
+                  <a href="https://twitter.com/shreyas/status/1276956836856393728" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                 
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+            
               </tr>
               <tr>
                 <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-s p-4 text-left flex items-center">
-                13#
+             
                 <span
                     className={
-                      "ml-3 font-bold " +
+                      "ml-3 font-light " +
                       +(color === "light" ? "text-gray-700" : "text-white")
                     }
                   >
@@ -840,49 +484,21 @@ export default function BestThreadsCardTable({ color }) {
                   <br></br> Volvo
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <i className="fas fa-circle text-teal-500 mr-2"></i> on
-                  schedule
+                  807
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex">
-                    <img
-                      src={require("assets/img/team-1-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-2-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-3-800x800.jpg")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                    <img
-                      src={require("assets/img/team-4-470x470.png")}
-                      alt="..."
-                      className="w-10 h-10 rounded-full border-2 border-gray-100 shadow -ml-4"
-                    ></img>
-                  </div>
+                  <a href="https://twitter.com/ankithharathi" target="new" className="font-bold text-gray-800 mt-8">
+                    @ankithharathi
+                  </a>
                 </td>
                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">90%</span>
-                    <div className="relative w-full">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                        <div
-                          style={{ width: "90%" }}
-                          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+               
+                  <a href="https://twitter.com/ankithharathi/status/1348795522547650560" target="new" className="font-bold text-gray-800 mt-8">
+                    View
+                  </a>
+                 
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-no-wrap p-4 text-right">
-                  <TableDropdown />
-                </td>
+              
               </tr>
             </tbody>
           </table>
